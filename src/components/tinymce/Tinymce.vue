@@ -55,7 +55,7 @@
       toolbar: {
         type: String,
         default: `undo redo | fontsizeselect bold italic underline strikethrough  | forecolor backcolor | alignleft aligncenter alignright alignjustify |
-              | link image  table lineheight   pastetext removeformat | customBtn letterspacing indent lineheight`
+              | link image  table  pastetext removeformat | customBtn letterspacing indent lineheight`
       },
     },
     data() {
@@ -86,10 +86,10 @@
           },
           // 此处为图片上传处理函数，这个直接用了base64的图片形式上传图片，
           // 如需ajax上传可参考https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_handler
-//          images_upload_handler: (blobInfo, success, failure) => {
-////            const img = 'data:image/jpeg;base64,' + blobInfo.base64()
-////            success(img)
-//          }
+          images_upload_handler: (blobInfo, success, failure) => {
+            const img = 'data:image/jpeg;base64,' + blobInfo.base64()
+            success(img)
+          }
         },
         myValue: this.value,
         isShowFileDlg: false
