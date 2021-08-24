@@ -1,0 +1,20 @@
+public
+.DS_Store
+node_modules/
+/dist/
+npm-debug.log*
+debug.log
+yarn-debug.log*
+yarn-error.log*
+src/components/plugin/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.cache
+package-lock.json
+webstorm.config.js
